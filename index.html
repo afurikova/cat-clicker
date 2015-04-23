@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cat Clicker</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<!-- add jQuery library from Content Delivery Network(CDN)-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1 id="pageTitle">Cat Clicker</h1>
+		<!-- <span data-bind="text: clicks, click: incrementCounter"></span> -->
+		<div class="nav">
+	    	<ul id="catList"></ul>
+		</div>
+		<div class="main">
+			<h2 class="name" data-bind="text: name"></h2>
+			<div class="level" data-bind="text: level"></div>		
+			<div class="counter" data-bind="text: clicks"></div>
+			<img clas="image" src="" alt"cute cat" data-bind="click: incrementCounter, attr: {src: img}">
+		</div>
+	</div>
+</body>
+<script type='text/javascript' src='js/knockout-3.1.0.js'></script>
+<script src="js/script.js"></script>
+</html>
