@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Cat Clicker</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
 
 	<!-- add jQuery library from Content Delivery Network(CDN)-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -10,19 +9,45 @@
 </head>
 <body>
 	<div class="container">
-		<h1 id="pageTitle">Cat Clicker</h1>
-		<!-- <span data-bind="text: clicks, click: incrementCounter"></span> -->
-		<div class="nav">
-	    	<ul id="catList"></ul>
+		<div class="row">
+			<div class="col-sm-12 header">
+				<h1 id="pageTitle">Cat Clicker</h1>
+			</div>
 		</div>
-		<div class="main">
-			<h2 class="name" data-bind="text: name"></h2>
-			<div class="level" data-bind="text: level"></div>		
-			<div class="counter" data-bind="text: clicks"></div>
-			<img clas="image" src="" alt"cute cat" data-bind="click: incrementCounter, attr: {src: img}">
+
+		<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+		<div class="row topNav">
+				<ul class="nav nav-tabs" id="catList" data-bind="foreach: catList">
+		    		<li><a data-bind="text: $data.name, click: $root.changeCurrentCat" href="#"></a></li>
+		    	</ul>
+		</div>
+		<div class="main row">
+			
+			<div class="col-xs-12 col-sm-3 info" data-bind="with: currentCat">
+				<div class="name" data-bind="text: name"></div>
+				<div class="level" data-bind="text: level"></div>		
+				<div class="counter" data-bind="text: clicks"></div>
+				<div class="nicknames"><strong>Nicknames:</strong>
+					<ul class="list list-inline" data-bind="foreach: nicknames">
+						<li data-bind="text: $data"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="image col-xs-12 col-sm-9" data-bind="with: currentCat">
+				<img id="catImg" src="" alt"cute cat" data-bind="click: $root.incrementCounter, attr: {src: img}">
+			</div>
 		</div>
 	</div>
 </body>
 <script type='text/javascript' src='js/knockout-3.1.0.js'></script>
 <script src="js/script.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </html>
