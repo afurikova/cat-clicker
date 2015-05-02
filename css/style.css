@@ -2,9 +2,17 @@
     border: 1px solid red !important;
     @grid-float-breakpoint:     400px;
 }*/
-.container {
+body {
 	background-image: url("../images/bg.png");
+}
+.container {
+	/*background-image: url("../images/bg.png");*/
+	background-color: white;
 	padding-bottom: 50px;
+	margin-bottom: 20px;
+ 	-webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  	-moz-box-shadow: 3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  	box-shadow: 3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 .header {
 	background-image: url("../images/bg.jpg");
@@ -12,23 +20,24 @@
 	color: white;
 }
 .header h1{
-	font-size: 50px;
-	text-shadow: 1px 1px #FFF;
-	color: #FC5A5A;
+	font-weight: bold;
+	font-size: 60px;
+	text-shadow: 1px 1px #DE3115;
+	color: #FFF;
 }
 .topNav {
-	background-color: #D8F838;
+	background-color: rgb(236, 255, 56);
 	height: 100%;
 	font-size: 16px;
 }
 .info {
 	padding-top: 1%;
-	font-size: 16px;
-	text-shadow: 1px 1px rgba(108, 106, 106, 0.48);
+	font-size: 30px;	
 }
 .info .name {
+	text-shadow: 1px 1px rgba(108, 106, 106, 0.48);
 	color: #FC5A5A;
-	font-size: 36px;
+	font-size: 50px;
 }
 .info .level {
 	font-weight: bold;
@@ -39,5 +48,5 @@
 #catImg {
 	width: 100%;
 	padding: 0px;
-	border: 2px solid #D8F838;
+	border: 5px solid rgb(236, 255, 56);
 }
