@@ -33,10 +33,27 @@
 						<li data-bind="text: $data"></li>
 					</ul>
 				</div>
+				<div class="admin disable" >
+				<form>
+		   			name:<br><input type="text" name="fname" data-bind="value: name"><br>
+		   			src:<br><input type="text" name="fname" data-bind="value: img"><br>
+		   			clicks:<br><input type="text" name="fname" data-bind="value: clicks	"><br>
+		   			<input data-bind="click: $root.saveData" type="submit" value="Submit">
+		   			<input data-bind="click: $root.disableAdminMode" type="submit" value="Cancel">
+	   			</form>
 			</div>
+			</div>
+
 			<div class="image col-xs-12 col-sm-9" data-bind="with: currentCat">
 				<img id="catImg" src="" alt"cute cat" data-bind="click: $root.incrementCounter, attr: {src: img}">
 			</div>
+		</div>
+
+
+ 
+
+		<div class="raw col-xs-12 but">
+			<button id="adminModeBtn" data-bind="click: $root.enableAdminMode">Admin</button>
 		</div>
 	</div>
 </body>

@@ -53,3 +53,7 @@ body {
 	padding: 0px;
 	border: 5px solid rgb(236, 255, 56);
 }
+
+.disable {
+	display: none;
+}
